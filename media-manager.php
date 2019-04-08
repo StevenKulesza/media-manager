@@ -15,6 +15,10 @@ defined('ABSPATH') or die('You do not have access silly human.');
 
 class MediaManagerPlugin
 {
+
+    function __construct() {
+        add_action('init', array($this, 'custom_post_type'));
+    }
     function activation()
     {
         // generate CPT
@@ -30,6 +34,12 @@ class MediaManagerPlugin
         // delete CPT
         //delete all plugin data
      }
+
+    function custom_post_type() {
+        register_post_type('book', ['public' => 'true']);
+    }
+
+    
 }
 
 if (class_exists( 'MediaManagerPlugin')) {
