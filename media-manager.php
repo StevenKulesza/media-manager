@@ -36,7 +36,7 @@ class MediaManagerPlugin
      }
 
     function custom_post_type() {
-        register_post_type('book', ['public' => 'true']);
+        register_post_type('book', ['public' => true, 'label' => 'Books']);
     }
 
     
