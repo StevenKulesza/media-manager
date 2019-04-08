@@ -22,12 +22,15 @@ class MediaManagerPlugin
     function activation()
     {
         // generate CPT
+        $this->custom_post_type();
         //flush rewrite rules
+        flush_rewrite_rules();
      }
     function deactivation()
     {
 
         // flush rewrite rules
+        flush_rewrite_rules();
     }
     function uninstall()
     {
