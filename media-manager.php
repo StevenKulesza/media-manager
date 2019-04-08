@@ -32,11 +32,6 @@ class MediaManagerPlugin
         // flush rewrite rules
         flush_rewrite_rules();
     }
-    function uninstall()
-    {
-        // delete CPT
-        //delete all plugin data
-     }
 
     function custom_post_type() {
         register_post_type('book', ['public' => true, 'label' => 'Books']);
@@ -55,6 +50,3 @@ register_activation_hook(__FILE__, array($mediaManagerPlugin, 'activation') );
 
 // deactivation
 register_deactivation_hook(__FILE__, array($mediaManagerPlugin, 'deactivation'));
-
-
-// uninstall
